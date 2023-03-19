@@ -4,7 +4,6 @@ import pandas as pd
 # Import CSV and convert to Pandas DataFrame
 file_path = "Motor_Vehicle_Collisions_-_Crashes.csv"
 crashes_df = pd.read_csv(file_path)
-crashes_df.head()
 
 # Add Month-Day-Year Columns
 crashes_df[['MONTH', 'DAY', 'YEAR']] = crashes_df['CRASH DATE'].str.split('/', expand=True)
